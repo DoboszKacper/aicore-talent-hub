@@ -7,6 +7,7 @@ import { Label } from '@/components/ui/label';
 import { Switch } from '@/components/ui/switch';
 import { ArrowLeft, Save } from 'lucide-react';
 import { BlogPost, CreateBlogPost, useCreateBlogPost, useUpdateBlogPost } from '@/hooks/useBlogPosts';
+import { RichTextEditor } from './RichTextEditor';
 
 interface PostEditorProps {
   post?: BlogPost | null;
@@ -165,15 +166,11 @@ export function PostEditor({ post, isEditing = false }: PostEditorProps) {
         </div>
 
         <div className="grid gap-2">
-          <Label htmlFor="content">Content *</Label>
-          <Textarea
-            id="content"
-            value={content}
-            onChange={(e) => setContent(e.target.value)}
+          <Label>Content *</Label>
+          <RichTextEditor
+            content={content}
+            onChange={setContent}
             placeholder="Write your post content here..."
-            rows={15}
-            required
-            className="bg-card font-mono text-sm"
           />
         </div>
       </div>

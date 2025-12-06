@@ -90,15 +90,10 @@ export default function BlogPost() {
                 </div>
               </header>
 
-              <div className="prose prose-invert prose-lg max-w-none">
-                {post.content.split('\n').map((paragraph, index) => (
-                  paragraph.trim() && (
-                    <p key={index} className="text-muted-foreground leading-relaxed mb-4">
-                      {paragraph}
-                    </p>
-                  )
-                ))}
-              </div>
+              <div 
+                className="prose prose-invert prose-lg max-w-none prose-headings:text-foreground prose-p:text-muted-foreground prose-a:text-primary prose-strong:text-foreground prose-li:text-muted-foreground prose-blockquote:border-primary prose-blockquote:text-muted-foreground prose-code:text-primary prose-code:bg-muted prose-code:px-1 prose-code:rounded prose-hr:border-border"
+                dangerouslySetInnerHTML={{ __html: post.content }}
+              />
             </motion.article>
           )}
         </div>
