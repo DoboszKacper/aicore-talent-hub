@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -11,6 +12,7 @@ const navItems = [
   { label: "Testimonials", href: "#testimonials" },
   { label: "FAQ", href: "#faq" },
   { label: "Contact", href: "#contact" },
+  { label: "Blog", href: "/blog", isLink: true },
 ];
 
 export function Navbar() {
@@ -55,13 +57,23 @@ export function Navbar() {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
             {navItems.map((item) => (
-              <button
-                key={item.label}
-                onClick={() => handleNavClick(item.href)}
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200"
-              >
-                {item.label}
-              </button>
+              'isLink' in item && item.isLink ? (
+                <Link
+                  key={item.label}
+                  to={item.href}
+                  className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200"
+                >
+                  {item.label}
+                </Link>
+              ) : (
+                <button
+                  key={item.label}
+                  onClick={() => handleNavClick(item.href)}
+                  className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200"
+                >
+                  {item.label}
+                </button>
+              )
             ))}
           </div>
 
@@ -96,13 +108,24 @@ export function Navbar() {
           >
             <div className="container-wide mx-auto px-6 py-4 flex flex-col gap-4">
               {navItems.map((item) => (
-                <button
-                  key={item.label}
-                  onClick={() => handleNavClick(item.href)}
-                  className="text-left text-muted-foreground hover:text-foreground transition-colors py-2"
-                >
-                  {item.label}
-                </button>
+                'isLink' in item && item.isLink ? (
+                  <Link
+                    key={item.label}
+                    to={item.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="text-left text-muted-foreground hover:text-foreground transition-colors py-2"
+                  >
+                    {item.label}
+                  </Link>
+                ) : (
+                  <button
+                    key={item.label}
+                    onClick={() => handleNavClick(item.href)}
+                    className="text-left text-muted-foreground hover:text-foreground transition-colors py-2"
+                  >
+                    {item.label}
+                  </button>
+                )
               ))}
               <Button
                 variant="nav"
