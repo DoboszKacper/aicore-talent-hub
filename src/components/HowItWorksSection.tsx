@@ -46,10 +46,10 @@ export function HowItWorksSection() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-            How our <span className="gradient-text">body leasing</span> works
+            How <span className="gradient-text">stewarding</span> works
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            A streamlined process designed to get you working with the right talent, fast.
+            A concierge process designed to connect you with the right talent, fast.
           </p>
         </motion.div>
 

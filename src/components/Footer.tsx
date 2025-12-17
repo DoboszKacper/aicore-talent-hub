@@ -1,21 +1,23 @@
 import { motion } from "framer-motion";
+import { LogoMark } from "@/components/LogoMark";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-border/50 py-8 px-6 lg:px-8">
+    <footer className="border-t border-border/40 py-8 px-6 lg:px-8">
       <div className="container-wide mx-auto">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="flex items-center gap-2"
+            className="flex items-center gap-3"
           >
+            <LogoMark size={32} />
             <span className="text-lg font-bold">
-              <span className="gradient-text">AICore</span>
-              <span className="text-foreground"> Talent</span>
+              <span className="gradient-text">Dev</span>
+              <span className="text-foreground">Stewards</span>
             </span>
           </motion.div>
 
@@ -23,19 +25,22 @@ export function Footer() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-sm text-muted-foreground"
+            className="text-sm text-muted-foreground text-center"
           >
-            © {currentYear} AICore Talent. All rights reserved.
+            Stewarding elite engineering talent for ambitious teams.
           </motion.p>
 
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="flex items-center gap-6 text-sm text-muted-foreground"
+            className="flex flex-col md:flex-row items-center gap-4 md:gap-6 text-sm text-muted-foreground"
           >
-            <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>
+            <span>© {currentYear} DevStewards</span>
+            <div className="flex items-center gap-6">
+              <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
+              <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>
+            </div>
           </motion.div>
         </div>
       </div>

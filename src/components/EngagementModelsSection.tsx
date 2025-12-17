@@ -55,7 +55,7 @@ export function EngagementModelsSection() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-            Flexible <span className="gradient-text">engagement models</span>
+            Flexible <span className="gradient-text">engagement options</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Choose the model that fits your needs, budget, and timeline.

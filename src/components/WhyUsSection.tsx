@@ -40,11 +40,11 @@ export function WhyUsSection() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-            Why companies choose{" "}
-            <span className="gradient-text">AICore Talent</span>
+            Why teams choose{" "}
+            <span className="gradient-text">DevStewards</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            We've built the infrastructure to connect you with exceptional AI talent, fast.
+            Premium stewarding of exceptional AI talent — fast, trusted, seamless.
           </p>
         </motion.div>
 

@@ -3,12 +3,13 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { LogoMark } from "@/components/LogoMark";
 
 const navItems = [
-  { label: "Why Us", href: "#why-us" },
+  { label: "Why DevStewards", href: "#why-us" },
   { label: "How It Works", href: "#how-it-works" },
   { label: "Expertise", href: "#expertise" },
-  { label: "Engagement Models", href: "#engagement" },
+  { label: "Engagement Options", href: "#engagement" },
   { label: "Testimonials", href: "#testimonials" },
   { label: "FAQ", href: "#faq" },
   { label: "Contact", href: "#contact" },
@@ -40,22 +41,23 @@ export function Navbar() {
       transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-background/80 backdrop-blur-xl border-b border-border/50"
+          ? "bg-background/90 backdrop-blur-xl border-b border-border/40"
           : "bg-transparent"
       }`}
     >
       <div className="container-wide mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2">
+          <a href="#" className="flex items-center gap-3">
+            <LogoMark size={36} />
             <span className="text-xl lg:text-2xl font-bold">
-              <span className="gradient-text">AICore</span>
-              <span className="text-foreground"> Talent</span>
+              <span className="gradient-text">Dev</span>
+              <span className="text-foreground">Stewards</span>
             </span>
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-6">
             {navItems.map((item) => (
               'isLink' in item && item.isLink ? (
                 <Link
@@ -83,7 +85,7 @@ export function Navbar() {
               variant="nav"
               onClick={() => handleNavClick("#contact")}
             >
-              Book a Free Consultation
+              Book a Consultation
             </Button>
           </div>
 
@@ -132,7 +134,7 @@ export function Navbar() {
                 className="mt-2"
                 onClick={() => handleNavClick("#contact")}
               >
-                Book a Free Consultation
+                Book a Consultation
               </Button>
             </div>
           </motion.div>
