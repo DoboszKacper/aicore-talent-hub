@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, LogOut, Settings } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useAuth } from "@/hooks/useAuth";
+import { LogoMark } from "@/components/LogoMark";
 
 export function BlogNavbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -31,17 +32,18 @@ export function BlogNavbar() {
       transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-background/80 backdrop-blur-xl border-b border-border/50"
+          ? "bg-background/90 backdrop-blur-xl border-b border-border/40"
           : "bg-transparent"
       }`}
     >
       <div className="container-wide mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
+          <Link to="/" className="flex items-center gap-3">
+            <LogoMark size={32} />
             <span className="text-xl lg:text-2xl font-bold">
-              <span className="gradient-text">AICore</span>
-              <span className="text-foreground"> Talent</span>
+              <span className="gradient-text">Dev</span>
+              <span className="text-foreground">Stewards</span>
             </span>
           </Link>
 

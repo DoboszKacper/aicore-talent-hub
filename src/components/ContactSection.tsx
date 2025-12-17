@@ -87,13 +87,13 @@ export function ContactSection() {
 
             <div className="space-y-4">
               <a 
-                href="mailto:hello@aicoretalent.com"
+                href="mailto:hello@devstewards.com"
                 className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
               >
                 <div className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center">
                   <Mail className="w-5 h-5" />
                 </div>
-                hello@aicoretalent.com
+                hello@devstewards.com
               </a>
               <a 
                 href="#"

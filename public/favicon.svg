@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <!-- Shield outline -->
+  <path d="M16 2L3 8V16C3 24 9 29.5 16 31C23 29.5 29 24 29 16V8L16 2Z" stroke="#16E0FF" stroke-width="1.5" fill="#050B14"/>
+  
+  <!-- Left lapel -->
+  <path d="M16 10L9 19V24L16 18V10Z" fill="#0B1628" stroke="#16E0FF" stroke-width="0.5"/>
+  
+  <!-- Right lapel -->
+  <path d="M16 10L23 19V24L16 18V10Z" fill="#0B1628" stroke="#16E0FF" stroke-width="0.5"/>
+  
+  <!-- Shirt -->
+  <path d="M13 18L16 23L19 18V26H13V18Z" fill="#EAF2FF"/>
+  
+  <!-- Bowtie -->
+  <path d="M11 14.5L16 17L21 14.5L16 12L11 14.5Z" fill="#7CFF6B"/>
+  <circle cx="16" cy="14.5" r="1.2" fill="#0B1628"/>
+  
+  <!-- Buttons -->
+  <circle cx="16" cy="21" r="0.8" fill="#445566"/>
+  <circle cx="16" cy="24" r="0.8" fill="#445566"/>
+</svg>

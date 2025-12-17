@@ -12,15 +12,15 @@ export function HeroSection() {
     <section className="relative min-h-screen flex items-center overflow-hidden pt-20">
       {/* Background Effects */}
       <div className="hero-glow top-1/4 -left-48 animate-glow-pulse" />
-      <div className="hero-glow bottom-1/4 -right-48 animate-glow-pulse" style={{ animationDelay: "1.5s" }} />
+      <div className="hero-glow bottom-1/4 -right-48 animate-glow-pulse" style={{ animationDelay: "2s" }} />
       
       {/* Grid Pattern */}
       <div 
-        className="absolute inset-0 opacity-[0.02]"
+        className="absolute inset-0 opacity-[0.015]"
         style={{
           backgroundImage: `linear-gradient(hsl(var(--foreground)) 1px, transparent 1px),
                            linear-gradient(90deg, hsl(var(--foreground)) 1px, transparent 1px)`,
-          backgroundSize: "60px 60px"
+          backgroundSize: "80px 80px"
         }}
       />
 
@@ -37,10 +37,10 @@ export function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/50 border border-border/50 mb-6"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/60 border border-border/40 mb-6"
             >
-              <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-              <span className="text-sm text-muted-foreground">Now accepting new clients</span>
+              <span className="w-2 h-2 rounded-full bg-accent-lime animate-pulse" />
+              <span className="text-sm text-muted-foreground">Curated engineering talent</span>
             </motion.div>
 
             <motion.h1
@@ -50,7 +50,7 @@ export function HeroSection() {
               className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6"
             >
               Elite AI Engineers,{" "}
-              <span className="gradient-text">Whenever You Need Them.</span>
+              <span className="gradient-text">Stewarded to You.</span>
             </motion.h1>
 
             <motion.p
@@ -59,8 +59,7 @@ export function HeroSection() {
               transition={{ delay: 0.4 }}
               className="text-lg md:text-xl text-muted-foreground mb-8 max-w-xl mx-auto lg:mx-0"
             >
-              We provide pre-vetted AI programmers on a flexible body leasing model 
-              so you can scale fast, without long hiring cycles.
+              We steward elite AI and software engineers into your team — fast, vetted, and seamlessly integrated.
             </motion.p>
 
             <motion.div
@@ -70,7 +69,7 @@ export function HeroSection() {
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8"
             >
               <Button variant="hero" onClick={() => handleScroll("#contact")}>
-                Talk to an Expert
+                Talk to a Steward
               </Button>
               <Button variant="heroOutline" onClick={() => handleScroll("#expertise")}>
                 View Talent Profiles
@@ -85,7 +84,7 @@ export function HeroSection() {
             >
               <span className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                Trusted by fast-growing tech companies
+                Trusted by ambitious teams
               </span>
               <span className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-primary" />
@@ -94,7 +93,7 @@ export function HeroSection() {
             </motion.div>
           </motion.div>
 
-          {/* Right Content - Stats Card */}
+          {/* Right Content - Steward Console */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -103,9 +102,9 @@ export function HeroSection() {
           >
             <div className="glass-card rounded-2xl p-6 lg:p-8 animate-float">
               {/* Header */}
-              <div className="flex items-center justify-between mb-6 pb-4 border-b border-border/50">
-                <span className="text-sm font-medium text-muted-foreground">Talent Dashboard</span>
-                <span className="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-medium">
+              <div className="flex items-center justify-between mb-6 pb-4 border-b border-border/40">
+                <span className="text-sm font-medium text-muted-foreground">Steward Console</span>
+                <span className="px-3 py-1 rounded-full bg-accent-lime/10 text-accent-lime text-xs font-medium">
                   Live
                 </span>
               </div>
@@ -137,14 +136,14 @@ export function HeroSection() {
                     <Cpu className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <p className="text-lg font-bold text-foreground">ML · LLMs · MLOps · Data Engineering</p>
-                    <p className="text-sm text-muted-foreground">Tech focus areas</p>
+                    <p className="text-lg font-bold text-foreground">ML · LLMs · MLOps · Data</p>
+                    <p className="text-sm text-muted-foreground">Core focus areas</p>
                   </div>
                 </div>
               </div>
 
               {/* Bottom */}
-              <div className="mt-6 pt-4 border-t border-border/50">
+              <div className="mt-6 pt-4 border-t border-border/40">
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-muted-foreground">Available engineers</span>
                   <div className="flex -space-x-2">
@@ -162,10 +161,20 @@ export function HeroSection() {
             </div>
 
             {/* Decorative elements */}
-            <div className="absolute -top-4 -right-4 w-24 h-24 border border-primary/20 rounded-2xl -z-10" />
+            <div className="absolute -top-4 -right-4 w-24 h-24 border border-primary/15 rounded-2xl -z-10" />
             <div className="absolute -bottom-4 -left-4 w-32 h-32 border border-primary/10 rounded-2xl -z-10" />
           </motion.div>
         </div>
+
+        {/* Tagline */}
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1 }}
+          className="text-center text-muted-foreground text-sm mt-16 lg:mt-24"
+        >
+          Stewarding elite engineering talent for ambitious teams.
+        </motion.p>
       </div>
     </section>
   );
