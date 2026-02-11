@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { LogoMark } from "@/components/LogoMark";
+import logoImage from "@/assets/logo.png";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -14,7 +14,7 @@ export function Footer() {
             transition={{ duration: 0.5 }}
             className="flex items-center gap-3"
           >
-            <LogoMark size={32} />
+            <img src={logoImage} alt="DevStewards logo" className="h-10 w-auto" />
             <span className="text-lg font-bold">
               <span className="gradient-text">Dev</span>
               <span className="text-foreground">Stewards</span>

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { LogoMark } from "@/components/LogoMark";
+import logoImage from "@/assets/logo.png";
 
 const navItems = [
   { label: "Why DevStewards", href: "#why-us" },
@@ -49,7 +49,7 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <a href="#" className="flex items-center gap-3">
-            <LogoMark size={36} />
+            <img src={logoImage} alt="DevStewards logo" className="h-12 w-auto" />
             <span className="text-xl lg:text-2xl font-bold">
               <span className="gradient-text">Dev</span>
               <span className="text-foreground">Stewards</span>
