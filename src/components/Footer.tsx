@@ -1,23 +1,24 @@
 import { motion } from "framer-motion";
-import logoImage from "@/assets/logo.png";
+import { LogoMark } from "@/components/LogoMark";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-card border-t border-border/40 py-8 px-6 lg:px-8">
+    <footer className="border-t border-border/40 py-8 px-6 lg:px-8">
       <div className="container-wide mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="flex items-center"
+            className="flex items-center gap-3"
           >
-            <div className="flex items-center gap-2">
-              <img src={logoImage} alt="DevStewards logo" className="h-10 w-auto" />
-              <span className="text-lg font-bold text-foreground tracking-tight">DevStewards</span>
-            </div>
+            <LogoMark size={32} />
+            <span className="text-lg font-bold">
+              <span className="gradient-text">Dev</span>
+              <span className="text-foreground">Stewards</span>
+            </span>
           </motion.div>
 
           <motion.p
