@@ -61,7 +61,14 @@ const processSteps = [
   { icon: Plug, num: "04", title: "Production Integration", desc: "Deploy into your live stack with monitoring, iteration, and ongoing support." },
 ];
 
-const integrations = ["Shopify", "Stripe", "Klaviyo", "Meta Ads", "Google Ads", "Custom APIs"];
+const integrations = [
+  { name: "Shopify", logo: "https://cdn.worldvectorlogo.com/logos/shopify.svg" },
+  { name: "Stripe", logo: "https://cdn.worldvectorlogo.com/logos/stripe-4.svg" },
+  { name: "Klaviyo", logo: "https://cdn.worldvectorlogo.com/logos/klaviyo-1.svg" },
+  { name: "Meta Ads", logo: "https://cdn.worldvectorlogo.com/logos/meta-1.svg" },
+  { name: "Google Ads", logo: "https://cdn.worldvectorlogo.com/logos/google-ads-2.svg" },
+  { name: "Custom APIs", logo: null },
+];
 
 const whyUs = [
   { icon: ShieldCheck, title: "No AI Hype", desc: "We build what works, not what sounds impressive in a pitch deck." },
@@ -243,9 +250,14 @@ export default function AiEcommerce() {
                 </motion.div>
               ))}
             </div>
-            <div className="flex flex-wrap justify-center gap-3">
-              {integrations.map((name) => (
-                <span key={name} className="px-4 py-2 rounded-full bg-secondary/60 border border-border/40 text-sm text-muted-foreground">{name}</span>
+            <div className="flex flex-wrap justify-center items-center gap-4">
+              {integrations.map((item) => (
+                <div key={item.name} className="flex items-center gap-2 px-5 py-3 rounded-full bg-secondary/60 border border-border/40">
+                  {item.logo && (
+                    <img src={item.logo} alt={item.name} className="w-5 h-5 object-contain brightness-0 invert opacity-70" />
+                  )}
+                  <span className="text-sm text-muted-foreground">{item.name}</span>
+                </div>
               ))}
             </div>
           </div>

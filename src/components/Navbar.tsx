@@ -14,7 +14,7 @@ const navItems = [
   { label: "FAQ", href: "#faq" },
   { label: "Contact", href: "#contact" },
   { label: "Blog", href: "/blog", isLink: true },
-  { label: "AI for E-commerce", href: "/ai-ecommerce", isLink: true },
+  { label: "AI for E-commerce", href: "/ai-for-ecommerce", isLink: true },
 ];
 
 export function Navbar() {
