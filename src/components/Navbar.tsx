@@ -41,15 +41,15 @@ export function Navbar() {
       transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-background/90 backdrop-blur-xl border-b border-border/40"
-          : "bg-transparent"
+          ? "bg-card/95 backdrop-blur-xl border-b border-border/40"
+          : "bg-card/80 backdrop-blur-md"
       }`}
     >
       <div className="container-wide mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <a href="#" className="flex items-center">
-            <img src={logoImage} alt="DevStewards logo" className="h-14 w-auto" />
+            <img src={logoImage} alt="DevStewards logo" className="h-20 w-auto" />
           </a>
 
           {/* Desktop Navigation */}
