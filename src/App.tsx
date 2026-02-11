@@ -11,6 +11,7 @@ import Auth from "./pages/Auth";
 import AdminBlog from "./pages/AdminBlog";
 import AdminBlogNew from "./pages/AdminBlogNew";
 import AdminBlogEdit from "./pages/AdminBlogEdit";
+import AiEcommerce from "./pages/AiEcommerce";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +25,7 @@ const App = () => (
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/ai-ecommerce" element={<AiEcommerce />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/auth" element={<Auth />} />
