@@ -5,7 +5,7 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-border/40 py-8 px-6 lg:px-8">
+    <footer className="bg-card border-t border-border/40 py-8 px-6 lg:px-8">
       <div className="container-wide mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <motion.div
@@ -14,7 +14,7 @@ export function Footer() {
             transition={{ duration: 0.5 }}
             className="flex items-center"
           >
-            <img src={logoImage} alt="DevStewards logo" className="h-12 w-auto" />
+            <img src={logoImage} alt="DevStewards logo" className="h-16 w-auto" />
           </motion.div>
 
           <motion.p
