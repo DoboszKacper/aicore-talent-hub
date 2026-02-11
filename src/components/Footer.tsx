@@ -12,13 +12,9 @@ export function Footer() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="flex items-center gap-3"
+            className="flex items-center"
           >
-            <img src={logoImage} alt="DevStewards logo" className="h-10 w-auto" />
-            <span className="text-lg font-bold">
-              <span className="gradient-text">Dev</span>
-              <span className="text-foreground">Stewards</span>
-            </span>
+            <img src={logoImage} alt="DevStewards logo" className="h-12 w-auto" />
           </motion.div>
 
           <motion.p

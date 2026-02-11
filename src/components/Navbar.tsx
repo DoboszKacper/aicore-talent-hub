@@ -48,12 +48,8 @@ export function Navbar() {
       <div className="container-wide mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-3">
-            <img src={logoImage} alt="DevStewards logo" className="h-12 w-auto" />
-            <span className="text-xl lg:text-2xl font-bold">
-              <span className="gradient-text">Dev</span>
-              <span className="text-foreground">Stewards</span>
-            </span>
+          <a href="#" className="flex items-center">
+            <img src={logoImage} alt="DevStewards logo" className="h-14 w-auto" />
           </a>
 
           {/* Desktop Navigation */}
