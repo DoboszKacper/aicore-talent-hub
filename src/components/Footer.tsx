@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { LogoMark } from "@/components/LogoMark";
 
@@ -38,6 +39,8 @@ export function Footer() {
           >
             <span>© {currentYear} DevStewards</span>
             <div className="flex items-center gap-6">
+              <Link to="/ai-ecommerce" className="hover:text-primary transition-colors">AI for E-commerce</Link>
+              <Link to="/blog" className="hover:text-primary transition-colors">Blog</Link>
               <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
               <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>
             </div>
