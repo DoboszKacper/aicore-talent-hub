@@ -39,8 +39,9 @@ export function BlogNavbar() {
       <div className="container-wide mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
-            <img src={logoImage} alt="DevStewards logo" className="h-20 w-auto" />
+          <Link to="/" className="flex items-center gap-2">
+            <img src={logoImage} alt="DevStewards logo" className="h-12 w-auto" />
+            <span className="text-lg font-bold text-foreground tracking-tight">DevStewards</span>
           </Link>
 
           {/* Desktop Navigation */}
