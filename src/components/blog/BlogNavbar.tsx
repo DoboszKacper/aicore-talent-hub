@@ -40,7 +40,7 @@ export function BlogNavbar() {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
-            <img src={logo} alt="DevStewards" className="h-14 lg:h-16 w-auto" />
+            <img src={logo} alt="DevStewards" className="h-20 lg:h-24 w-auto -my-4" />
           </Link>
 
           {/* Desktop Navigation */}
