@@ -50,7 +50,7 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <a href="#" className="flex items-center gap-3">
-            <img src={logo} alt="DevStewards" className="h-9 lg:h-11 w-auto" />
+            <img src={logo} alt="DevStewards" className="h-14 lg:h-16 w-auto" />
           </a>
 
           {/* Desktop Navigation */}
