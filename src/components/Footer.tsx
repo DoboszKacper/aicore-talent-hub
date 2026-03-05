@@ -15,7 +15,7 @@ export function Footer() {
             transition={{ duration: 0.5 }}
             className="flex items-center gap-3"
           >
-            <img src={logo} alt="DevStewards" className="h-16 w-auto -my-2" />
+            <img src={logo} alt="DevStewards" className="h-32 w-auto -my-8" />
           </motion.div>
 
           <motion.p
