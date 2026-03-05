@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, LogOut, Settings } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useAuth } from "@/hooks/useAuth";
-import { LogoMark } from "@/components/LogoMark";
+import logo from "@/assets/logo.png";
 
 export function BlogNavbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -40,11 +40,7 @@ export function BlogNavbar() {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
-            <LogoMark size={32} />
-            <span className="text-xl lg:text-2xl font-bold">
-              <span className="gradient-text">Dev</span>
-              <span className="text-foreground">Stewards</span>
-            </span>
+            <img src={logo} alt="DevStewards" className="h-9 lg:h-11 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}

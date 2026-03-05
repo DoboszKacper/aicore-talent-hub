@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { LogoMark } from "@/components/LogoMark";
+import logo from "@/assets/logo.png";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -15,11 +15,7 @@ export function Footer() {
             transition={{ duration: 0.5 }}
             className="flex items-center gap-3"
           >
-            <LogoMark size={32} />
-            <span className="text-lg font-bold">
-              <span className="gradient-text">Dev</span>
-              <span className="text-foreground">Stewards</span>
-            </span>
+            <img src={logo} alt="DevStewards" className="h-8 w-auto" />
           </motion.div>
 
           <motion.p
